@@ -63,7 +63,7 @@ public class questionsUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         answerButtonGroup.add(yesRadioButton);
-        yesRadioButton.setText("Yes");
+        yesRadioButton.setText("Ja");
         yesRadioButton.setEnabled(false);
         yesRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +72,7 @@ public class questionsUI extends javax.swing.JFrame {
         });
 
         answerButtonGroup.add(noRadioButton);
-        noRadioButton.setText("No");
+        noRadioButton.setText("Nee");
         noRadioButton.setEnabled(false);
         noRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +81,7 @@ public class questionsUI extends javax.swing.JFrame {
         });
 
         answerButtonGroup.add(dontknowRadioButton);
-        dontknowRadioButton.setText("Don't know");
+        dontknowRadioButton.setText("Weet niet");
         dontknowRadioButton.setEnabled(false);
         dontknowRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +89,7 @@ public class questionsUI extends javax.swing.JFrame {
             }
         });
 
-        previousButton.setText("Previous");
+        previousButton.setText("Vorige");
         previousButton.setEnabled(false);
         previousButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +97,7 @@ public class questionsUI extends javax.swing.JFrame {
             }
         });
 
-        nextButton.setText("Next");
+        nextButton.setText("Volgende");
         nextButton.setEnabled(false);
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +105,7 @@ public class questionsUI extends javax.swing.JFrame {
             }
         });
 
-        resultButton.setText("Result");
+        resultButton.setText("Resultaat");
         resultButton.setEnabled(false);
         resultButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +129,7 @@ public class questionsUI extends javax.swing.JFrame {
         questionTextArea.setColumns(20);
         questionTextArea.setLineWrap(true);
         questionTextArea.setRows(5);
-        questionTextArea.setText("Filling in this questionnaire helps you to set up a test strategy for a (new) project.\n\nClick 'Start' to begin the questionnaire...");
+        questionTextArea.setText("Deze vragenlijst helpt bij het opstellen van een teststrategie voor een (nieuw) project.\n\nKlik 'Start' om te beginnen.");
         questionTextArea.setWrapStyleWord(true);
         questionScrollPane.setViewportView(questionTextArea);
 
@@ -289,17 +289,17 @@ public class questionsUI extends javax.swing.JFrame {
         for (qaCount = 0; qaCount < qualityAttributes.size(); qaCount++) {
             outcomeTextArea.append(qualityAttributes.get(qaCount).qaName + "\n");
             if (qualityAttributes.get(qaCount).qaNoDontKnow > 3) {
-                outcomeString = "more research needed\n";
+                outcomeString = "Niet genoeg informatie, meer onderzoek nodig\n";
             }
             else {
                  if (qualityAttributes.get(qaCount).qaScore <= 1) {
-                     outcomeString = "this quality attribute needs minimal attention\n";
+                     outcomeString = "Dit kwaliteitsattribuut heeft minimale aandacht nodig\n";
                  }
                  else if (qualityAttributes.get(qaCount).qaScore > 3) {
-                     outcomeString = "this quality attribute needs maximum attention\n";
+                     outcomeString = "Dit kwaliteitsattribuut heeft maximale aandacht nodig\n";
                  }
                  else {
-                     outcomeString = "this quality attribute needs moderate attention\n";
+                     outcomeString = "Dit kwaliteitsattribuut heeft gemiddelde aandacht nodig\n";
                  }
             }
             outcomeTextArea.append(outcomeString);

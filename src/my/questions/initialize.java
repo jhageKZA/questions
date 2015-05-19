@@ -41,7 +41,7 @@ public class initialize {
     
     while (s2.hasNextLine()){
         qString = s2.nextLine();
-        qInts = qString.split(",");
+        qInts = qString.split(";");
         questionIndex = Integer.parseInt(qInts[0]);
         for (i = 1; i<qInts.length; i++){
             questionList.get(questionIndex).affectedQualityAttributes.add(Integer.parseInt(qInts[i]));
@@ -62,7 +62,7 @@ public class initialize {
      
     while (s1.hasNextLine()){
         qaString = s1.nextLine();
-        qaStrings = qaString.split(",");
+        qaStrings = qaString.split(";");
         qaQualityAttribute = new qualityAttribute();
         qaQualityAttribute.qaName = qaStrings[0];
         qaQualityAttribute.qaDescription = qaStrings[1];

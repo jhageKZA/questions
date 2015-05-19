@@ -288,14 +288,14 @@ public class questionsUI extends javax.swing.JFrame {
         // show the results in the outcomeTextArea
         for (qaCount = 0; qaCount < qualityAttributes.size(); qaCount++) {
             outcomeTextArea.append(qualityAttributes.get(qaCount).qaName + "\n");
-            if (qualityAttributes.get(qaCount).qaNoDontKnow > 3) {
+            if (qualityAttributes.get(qaCount).qaNoDontKnow > 8) {
                 outcomeString = "Niet genoeg informatie, meer onderzoek nodig\n";
             }
             else {
-                 if (qualityAttributes.get(qaCount).qaScore <= 1) {
+                 if (qualityAttributes.get(qaCount).qaScore <= 4) {
                      outcomeString = "Dit kwaliteitsattribuut heeft minimale aandacht nodig\n";
                  }
-                 else if (qualityAttributes.get(qaCount).qaScore > 3) {
+                 else if (qualityAttributes.get(qaCount).qaScore > 7) {
                      outcomeString = "Dit kwaliteitsattribuut heeft maximale aandacht nodig\n";
                  }
                  else {
